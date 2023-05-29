@@ -1,0 +1,976 @@
+body {  /* esto lo hacemos porque en la configuracion estandar de la pagina ya viene con un margin y paddin */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.contenedor{
+    width: 90%; /* va a ocpuar el 90% de las 1280px */
+    max-width: 1280px; /* esta es la medida estandar de las computadoras */
+    margin: auto; /* para que los elementos no queden pegados a los bordes y importante que a cualquier elemento que le damos un with fijo tiene que tener un margin auto para que este centrado*/
+}
+
+header {
+    background-image: url(imagenes/ondas.png), linear-gradient(237deg, #46b3ff 0%, #0752fe 100%); /* linear-gradiet es para hacer el degradado */
+    background-repeat: no-repeat; /* para que no se repita la imagen */
+    background-position: bottom center; /* se le cambia la posicion en este caso abajo y al centro */
+    height: 850px;/* alto fijo al header */
+    background-size: contain;
+}
+
+.menu {
+    background: #fff;
+    padding: 9px 20px;
+    position: fixed; /* posicion fija del menu */
+    width: 100%; /* un %100 de ancho para que ocupe toda la pantalla */
+    top: 0; /* con la propiedad fixed le podemos dar valores a top, boton, letfh o rigth para acomodar el tamaño */
+    box-shadow: 1px 1px 8px #ccc; /* sombra para el menu */
+    z-index: 1; /* el elemento que tiene el Z-INDEX se pone delante de todos los demas, con el 1 indicamos eso, aveces no es suficiente y se pone 10 o 100 o 1000 depende de la cantidad de elementos que tengamos*/
+}
+
+.menu .contenedor {
+    display: flex; /* el dlsplay flex pone los elementos uno al lado del otro */
+    justify-content: space-between; /*  pone los elementos bien espaciados */
+    align-items: center; /* para alinear los elementos en la misma linea o altura, simepre tieneque estar con el display flex sino no funciona */
+}
+
+header .logo  {
+    font-size: 23px; /* tamaño de la letra */
+    font-weight: bold; /* estilo de letra, en este caso negrita */
+    color: #000;
+}
+nav ul li {
+    display: inline-block; /* para que se pongan uno al lado del otro */
+    margin: 0 20px; /* margin 0 de arriba y abajo y 20 en los costados */
+}
+
+nav ul li a { /* en el nav a los ul y li que tengan a  hce lo siguiente*/
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+
+}
+
+header .contenedor-inicio {
+    display: flex;
+    justify-content: center;
+    margin: 9vh 0; /* vh vipor height */
+}
+
+header .titular, header .imagen {
+    width: 40%;
+}
+
+header h1{
+    font-family: 'Rubik';
+    font-size: 52px;
+    color: #fff;
+    text-shadow: 1px 2px 50px #000; /* con text-shadow le hacemos una sombra al texto, si ponemos en el google eso y te da la opcion de poder armarlo */
+}
+
+header p {
+    color: #fff;
+    line-height: 30px; /* para separar los reglones */
+}
+
+header img {
+    width: 100%;
+}
+
+.boton {
+    background: #253547;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.2); /* sombra a la caja */
+    margin-top: 20px;
+    display: inline-block; /* para que los elementos de linea tengan propiedades de bloque */
+
+}
+
+/* DOMINIO */
+
+.dominios {
+    display: flex;
+
+}
+.dominios li{
+    list-style: none; /*  se eliminan los estilos de la lista */
+    margin: 0 20px;
+}
+span.punto {
+    color: #1776ff;
+    font-size: 24px;
+}
+span.dominio{
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+span.anio {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Seccion Servicios */
+
+#services {  /* con el # llamamos al id no a la clase */
+padding-top: 120px;
+
+}
+#services .contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+
+#services .titular{
+    width: 49%;
+}
+
+#services .service {
+    width: 25%;
+    background-color: #fff;
+    box-shadow: 0px 90px 160px 0 rgba(0,0,0,0.1);
+    border-radius: 24px 24px 24px 24px;
+    padding: 20px 30px;
+}
+#services h2, #pricing h2, #file h2, #easy h2, #testimonials h2 {
+    font-family: 'Rubik';
+    font-weight: 500;
+    text-transform: uppercase; /* transforma el text a mayuscula */
+    font-size: 14px;
+    color: #ff8f00 !important;
+    letter-spacing: 1px; /* esto es para separar las letras */
+}
+
+#services h3, #pricing h3, #file h3, #easy h3, #testimonials h3{
+    font-weight: 500;
+    font-size: 38px;
+}
+
+#services .boton{
+    background: #2970fa;
+    padding: 15px 38px; 
+    letter-spacing: 1px;
+}
+#services h4{
+    font-size: 23px;
+    font-weight: normal;
+    font-family: 'Rubik';
+}
+.service p{
+    color: #787878;
+    font-size: 15px;
+    line-height: 32px; /* alto de linea */
+}
+.service a{
+    color: #2970fa;
+    text-decoration: none;
+    font-family: 'Rubik';
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.contenedor-services-2 {
+    margin-top: 60px;
+}
+
+.contenedor-services-2 #dos {
+    position: relative;
+    top: -250px;
+
+}
+#services #uno {
+    margin-left: 152px;
+}
+
+/* SECCION PRICING */
+
+#pricing{
+    padding-top: 90px;
+}
+#pricing h2, #pricing h3 {
+    text-align: center;
+    margin: 0;
+}
+
+#pricing h3{
+    font-weight: bold;
+}
+
+.contenedor-precios {
+    display: flex;
+    justify-content: space-around;
+}
+
+#pricing .tabla {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 8px 90px 160px 8px rgb(0, 0, 0, 0.1);
+    padding: 20px 50px;
+}
+
+#pricing .ul {
+    padding: 0; /* xq el Ul viene con padding por defecto */
+}
+
+#pricing .tabla li:nth-child(1) { /* con nth-child se usa para llamar a un elemnto especifico y entre parentesis se pone al que llamas */
+font-family: 'Rubik';
+list-style: none;
+color: #ff8f00;
+margin-bottom: 20px;
+font-size: 10px;
+font-weight: bold;
+margin-left: -21px; 
+}
+#pricing .tabla .dolar {
+    position: absolute; /* con el position absolute se puede dar una pósicion absoluta */
+    color: #999;
+    font-size: 18px;
+}
+
+#pricing .tabla .numero{
+    font-family:'Rubik';
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 14px;
+}
+
+#pricing .mes {
+    color: #999;
+}
+
+#pricing .tabla li:nth-child(2) {
+    list-style: none;
+    margin-bottom: 48px;
+    margin-left: -21;
+}
+
+#pricing .item{
+    color: #ff8f08;
+    margin-bottom: 27px;
+}
+
+#pricing #two .item{
+    color: #296ffa;
+}
+
+#pricing .item span{
+    color: #666;
+}
+
+#pricing #three .item {
+    color: #2acf80;
+}
+
+#pricing #one a{
+    color: #ff8f08;
+    background: rgba(255, 143, 0, 0.1); /* con el ultimo valor le doy la transparencia */
+}
+
+#pricing #two li:nth-child(1) {
+    color: #296ffa;
+}
+
+#pricing #three li:nth-child(1) {
+    color: #2acf8d;
+}
+
+#pricing #three a{
+    color: #29cf8d;
+    background: rgba(41,207,141,0.1);
+}
+
+#pricing #two a {
+    color: #fff;
+    background: #296ffa;
+}
+
+#pricing .hidden {
+    color: #ccc;
+}
+
+#pricing .tabla{
+    position: relative; /* para que la linea se posicione en relacion a la tabla */
+}
+
+#pricing hr{
+    position: absolute; /* el elemento que tenga posicion absolute se posicion en base al elemnto con la posicion relative */
+    top: 150px;
+    left: 0;
+    width: 100%;
+    border-color: #2423230d; /* teniendo en cuenta que el hr es una linea no se le puede dar color sino un borde color */
+}
+
+/* ESTILOS FEACTURES */
+
+#feactures {
+    padding-top: 90px;
+}
+
+#feactures h2 {
+    font-family: 'Rubik';
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ff8f00;
+    letter-spacing: 1px;
+}
+
+#feactures h3 {
+  font-weight: bold;  
+  font-size: 38px;
+  margin: 0;
+}
+#feactures p {
+    color: #666;
+    line-height: 30px;
+}
+
+#feactures .contenedor {
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    padding-bottom: 40px;
+}
+
+#feactures .titular {
+    width: 49%;
+    margin-right: 77px;
+}
+
+#feactures .imagen img{
+    width: 49%;
+}
+
+.contenedor-feactures-2 {
+    display: flex;
+    flex-direction: column; /* direccion de los elementos por defecto esta en fila, si le ponemos column los elementos se ponen uno abajo del otro */
+    border-top: 1px solid #cccccc6b;
+    padding-top: 40px;
+}
+
+.feactures-1, .feactures-2 {
+    display: flex;
+    flex-wrap: wrap; /* si los elementos estan llegando al tope del ancho la pantalla se bajan para que no se corten */
+}
+.feacture {
+    width: 30%;
+    margin: auto; /* cuando le damos un wodth fijo a un elemento se pone a la izquierda, con esto hacemos que se centre  */
+}
+.feacture ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+.feacture li:nth-child(2) { /* llama al elemento hijo numero 2 de la lista quje esta dentro de feacture, si ponemos 1 llamamos a la imagen */
+margin-left: 20px;
+color: #666;
+font-size: 14px;
+line-height: 30px;
+}
+
+/* ESTILOS SECCION FILE */
+
+#file {
+    padding-top: 90px;
+}
+
+#file .contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+#file .iconos .icono {
+    margin-right: 15px;
+}
+
+#file .iconos h4, #file p{
+    margin: 0;
+}
+
+#file .iconos h4 {
+    font-weight: bold;
+}
+
+#file .iconos p{
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+#file .item {
+    display: flex;
+}
+
+#file .titular {
+    width: 42%;
+    margin-right: 46px;
+}
+
+#file .imagen {
+    width: 40%;
+}
+
+#file .imagen img {
+    width: 100%;
+}
+
+#file .imagen .boton{
+    background: #296ffa;
+    padding: 15px 40px;
+    letter-spacing: 1px;
+    font-family: 'Rubik';
+}
+
+#file h3{
+    font-size: 34px;
+    width: 78%;
+    margin: 0;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#file h2{
+    margin: 0;
+}
+
+#file .iconos{
+    margin-top: 30px;
+}
+
+#file .icono {
+    margin-right: 15px;
+}
+
+/* SECCION EXPERT */
+
+#expert {
+    padding: 196px 0;
+    background-image: url(imagenes/expert4.png), linear-gradient(150deg,#ffba61 0%, #ffe070 100%);
+    background-size: 1521px 975px; /* el primer valor del bg hace referencia al ancho y el segundo valor al alto */
+    background-position: 50% 50%; /* primer valor posicion horizontal, segundo valor posicion vertical */
+    text-align: center;
+    
+}
+
+#expert h2{
+    font-family: 'Rubik';
+    font-size: 52px;
+    color: #fff;
+    text-shadow: 1px 2px 12px #61605d;
+    width: 50%;
+    margin: auto;
+}
+
+#expert p{
+    width: 50%;
+    margin: auto;
+    color: #fff;
+    margin-top: 30px;
+}
+
+#expert .boton{
+    padding: 15px 50px;
+    letter-spacing: 1px;
+}
+
+/* ESTILOS EASY SETUP */
+
+#easy {
+    padding-top: 90px;
+}
+#easy .contenedor {
+    display: flex;
+}
+#easy .titular, #easy .imagen{
+    width: 40%;
+}
+
+#easy .imagen img {
+    width: 100%;
+}
+
+#easy .imagen {
+    margin-right: 72px;
+}
+
+#easy h2, #easy h3 {
+    margin: 0;
+}
+
+#easy p {
+    color: #666;
+    line-height: 30px;
+}
+#easy ul {
+    display: flex;
+    padding: 0;
+    margin-bottom: 37px;
+}
+#easy ul li {
+    list-style: none;
+}
+
+#easy i {
+    background: #ff8f00;
+    color: #fff;/* al ser un icono se le puede cambiar el color a diferencia que una imagen que no se puede. los iconos son mucho mas manipulables que las imagenes */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px; /* cada vez que hagamos iconos tiene que tener alto, ancho y alto line tiene que ser fijo y del mismo valor para poder centrar el icono */
+}
+
+#easy ul li:nth-child(1) { /* importante que para darle margen a los elementos del li elejir directo el li no el elemento */
+    margin-right: 20px;
+}
+
+#easy .boton {
+ background: #2870fa;
+ padding: 15px 40px;
+ letter-spacing: 1px;
+ margin-top: 0px;
+}
+
+#easy ul {
+    margin-top: 30px;
+}
+
+/* Estilos TESTIMONIALS */
+
+#testimonials h2, #testimonials h3 {
+    margin: 0;
+    text-align: center;
+}
+#testimonials {
+    padding-top: 90px;
+}
+
+.contenedor-testimonials {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.testimonial {
+    width: 24%;
+    text-align: center;
+    background-image: url(imagenes/testimonial-back.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #fff;
+    box-shadow: 0px 90px 160px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 0 32px;
+    font-family:'Open Sans';
+}
+
+#testimonial p {
+    font-size: 14px;
+    color: #666;
+    line-height: 28px;    
+    font-weight: 100;
+}
+
+#testimonial .nombre {
+    font-weight: bold;
+}
+
+/* Estilo SATISFACTION */
+
+#satisfaction {
+    padding-top: 90px;
+    padding-bottom: 156px;
+}
+
+#satisfaction h3 {
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+}
+
+#satisfaction .contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+}
+
+#satisfaction .tarjeta {
+    background-image: url(imagenes/tarjeta1.png), linear-gradient(237deg, #46b3ff 0%, #0752fe 100%);
+    background-position: bottom left;
+    background-size: cover; /* cover estira el fondo para que ocupe el 100% de la pantalla */
+    border-radius: 24px;
+    width: 40%;
+    margin: 0 35px;
+    padding: 27px 40px 26px 33px;
+}
+
+#satisfaction .tarjeta-dos {
+    background-image: url(imagenes/tarjeta2.png), linear-gradient(150deg, #ffba61 0%, #ffdc71 100%);
+
+}
+
+#satisfaction h4 {
+    font-family: 'Rubik';
+    color: #fff;
+    font-size: 26px;
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+#satisfaction p {
+    color: #fff;
+    line-height: 34px;
+    margin: 0;
+}
+/* ESTILOS TREINTA */
+
+#treinta {
+    background-image: url(imagenes/30.png), linear-gradient(237deg, #46b3ff 0%, #0752fe 100%);
+    background-size: contain; /* no estira el fondo */
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 310px 0 155px 0;
+    text-align: center;
+}
+
+#treinta h2 {
+    font-size: 52px;
+    font-family: 'Rubik';
+    color: #fff;
+    text-shadow: 1px 2px 13px #616a5d;
+    width: 50%;
+    margin: auto;
+}
+
+#treinta p {
+    color: #fff;
+    width: 58%;
+    margin: auto;
+    margin-top: 30px;
+    line-height: 30px;
+}
+#treinta .boton {
+    padding: 15px 50px;
+    letter-spacing: 1px;
+}
+
+/* ESTILOS FOOTER */
+
+footer {
+    background: #161616;
+    color: #666;
+}
+
+footer .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1050px;
+}
+
+footer .copy {
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+footer .redes li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .redes i {
+    font-size: 27px;
+}
+
+/* ESTILOS POPUP */
+
+.popup {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    box-shadow: 1px 1px 7px #000;
+    text-align: center;
+}
+
+.popup p{
+    color: #000;
+    font-weight: bold;
+}
+
+.popup input[type="submit"] {
+    display: block;
+    width: 166px;
+    margin: auto;
+    margin-top: 30px;
+    background: #296ffa;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.popup .cerrar {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    color: #fff;
+    background: #296efa;
+    width: 30px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 15px;
+    font-size: 15px;
+    width: 55%;
+}
+
+/* ESTILOS TABS */
+
+#tabs {
+    padding-top: 90px;
+    margin-bottom: 50px;
+}
+#tabs .contenedor {
+    box-shadow: 1px 1px 5px #000;
+}
+
+.tabs-menu ul {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.tabs-menu li {
+    list-style: none;
+    border-right: 1px solid #ccc;
+    padding-right: 52px;
+    height: 44px;
+    cursor: pointer;
+    padding-top: 16px;
+    padding-left: 37px; 
+}
+/* 
+.tabs-menu #tab-uno {  cuando esta tab esta activa tiene que tener un background blanco
+    background: #fff;
+} */
+
+.active {
+    background: #fff;
+}
+
+/* RESPONSIVE PAGINA */
+
+.menu-icon { /* por defecto esta clase no va a aparecer */ 
+    display: none;  /* esto es para que no aparezca */
+    height: 20px;
+    width: 20px;
+}
+
+@media screen and (max-width: 480px) { /* con @media le decimos cuando el medio por el cual se vea la wed tenga un maximo de ancho de 480px (para el telefono) */
+
+    nav { /* en la barra de navegacion hacemos */
+position: absolute;
+top: 100%; /* esto es para que baje hasta un %100 de su div contenedor, en este caso el div.contenedor */
+left: 0; /* para que este totalmente a la izquierda */
+background: #232220;
+width: 100%; /* para que valla al %100 de la pantalla */
+display: none; /* de esta manera esta oculto porque se tiene que mostrar cuando se haga click en un lugar*/
+    }
+    nav ul li { /* a los item de la lista de la barra de navegacion */
+        display: block; /* para que esten uno debajo del otro */
+        margin: 23px 20px;
+    }
+    nav ul li a { /* a los link de los item de la lista de la barra de navegacion */
+        color: #fff;
+    }
+
+    .menu-icon {
+        display: block; /* para que se muestre */
+        position: absolute; 
+        right: 65px; /* corremos a la derecha el icono */
+    }
+    header .contenedor-inicio {
+        flex-direction: column;
+        margin: 14vh 0;
+    }
+    header .titular, header .imagen {
+        width: 100%;
+    }
+    header .logo {
+        margin-left: -15px;
+    }
+    header h1 {
+        font-size: 38px;
+    }
+    /* RESPONSIVE DOMINIOS */
+
+    .dominios {
+        flex-direction: column; /* como la clase ya tiene un display flex, lo que hacemos aca es decirle que cuando el max width 480px los dominios se pongan en columna*/
+    }
+    .dominios li {
+        margin: 8px 28px;
+    } 
+
+    /* RESPONSIVE SERVICES */
+
+    #services {
+        padding-top: 50px;
+    }
+    #services .contenedor {
+        flex-direction: column;
+    }
+    #services .titular {
+        width: 100%;
+    }
+    #services h3, #pricing h3, #file h3, #easy h3, #testimonials h3 {
+        font-size: 24px;
+    }
+
+    #service-uno {
+        margin-left: 0 !important; /* cuando se pone el !important se le dice que este estilo es mas importante que las otras */
+        margin-top: 40px;
+    }
+    #services .service {
+        width: 81%;
+
+    }
+    .contenedor-services-2 #dos {
+        top: 57px;
+    }
+    #service-cuatro {
+        margin-top: 104px;
+    }
+
+    /* RESPONSIVE FEACTURES */
+
+    #feactures .contenedor {
+        flex-direction: column;
+    }
+
+    #feactures .titular {
+        width: 100%;
+        margin-right: 0;
+    }
+    #feactures .imagen img{
+        width: 100%;
+    }
+    .feactures-1, .feactures-2 {
+        flex-direction: column;
+    }
+    .feacture {
+        width: 100%;
+    }
+/* RESPONSIVE PRICING */
+
+    .contenedor-precios {
+        flex-direction: column;
+    }
+
+    #pricing .tabla {
+        margin-bottom: 50px;
+    }
+    /* RESPONSIVE FILE */
+    #file .contenedor {
+        flex-direction: column;
+    }
+    #file .titular {
+        width: 100%;
+        margin-right: 0;
+    }
+    #file h3{
+        width: 100%;
+    }
+    #file .imagen {
+        width: 100%;
+    }
+    /* RESPONSIVE EXPERT */
+    #expert h2 {
+        width: 100%;
+        font-size: 30px;
+    }
+    #expert p {
+        width: 100%;
+    }
+    #expert {
+        padding: 146px 0;
+        background-image: url(imagenes/expert4.png), linear-gradient(150deg,#ffba61 0%, #ffe070 100%);
+        background-size: 600px 875px;
+        background-position: 50% 50%;
+        text-align: center;
+    }
+
+    /* RESPONSIVE EASY */
+    #easy .contenedor {
+        flex-direction: column;
+    }
+    #easy .imagen, #easy .titular{
+        width: 100%;
+    }
+
+    /* responsive testimonials */
+
+    .contenedor-testimonials {
+        flex-direction: column;
+    }
+    .testimonial {
+        width: 82%;
+        margin-bottom: 40px;
+    }
+
+    /* RESPONSIVE SATISFACTION */
+
+    #satisfaction .contenedor-tarjetas {
+        flex-direction: column;
+    }
+    #satisfaction .tarjeta {
+        width: 88%;
+        margin: 0 0;
+        padding: 13px 23px 14px 23px;
+        margin-bottom: 40px;
+    }
+    #satistaction h4 {
+        font-size: 19px;
+    }
+    #satisfaction p {
+        line-height: 29px;
+        font-size: 14px;
+    }
+    /* RESPONSIVE TREINTA */
+
+    #treinta h2 {
+        font-size:  28px;
+        width: 100%;
+    }
+    #treinta p {
+        width: 100%;
+    }
+    #treinta {
+        padding: 110px 0 55px 0;
+        margin-top: 3PX;
+    }
+    /* RESPONSIVE FOOTER */
+    #footer .contenedor {
+        flex-direction: column;
+    }
+    /* RESPONSIVE TABS */
+    .tabs-menu li {
+        padding-right: 22px;
+        padding-left: 21px;
+        font-size: 15px;
+    }
+    .tab img {
+        width: 100%;
+    }
+
+}
